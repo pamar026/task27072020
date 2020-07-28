@@ -1,0 +1,18 @@
+{"users" : [
+    {
+        "firstName" : "Amar",
+        "lastName" : "Patil",
+        "age" : 26
+    },
+    {
+        "firstName" : "Ram",
+        "lastName" : "Kale",
+        "age" : 28
+    },
+    {
+        "firstName" : "Bhushan",
+        "lastName" : "Patil",
+        "age" : 23
+    }
+]
+}

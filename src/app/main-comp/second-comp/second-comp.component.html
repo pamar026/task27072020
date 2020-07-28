@@ -1,0 +1,23 @@
+<h3>
+    Second Component
+</h3>
+<table class="table" cellpadding='5' cellspacing='5'>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users;index as i">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.age}}</td>
+        <td class="pointer" (click)='onUpdateUser(i)'>Update</td>
+        <td class="pointer" (click)='onDeleteUser(i)'>Delete</td>
+      </tr>
+      </tbody>
+</table>

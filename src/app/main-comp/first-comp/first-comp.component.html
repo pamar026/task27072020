@@ -1,0 +1,37 @@
+<h3>
+    First Component
+</h3>
+<form #userForm='ngForm' (ngSubmit)='onAddUser()'>
+    <table cellpadding='5' cellspacing='5' width="100%">
+        <tr>
+            <td>
+                <input type="text" placeholder="First Name" name="firstName" 
+                ngModel required  #firstName="ngModel">
+                <small *ngIf="!firstName.valid && firstName.touched">Plese enter First Name</small>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" placeholder="Last Name" name="lastName" 
+                ngModel required #lastName="ngModel">
+                <small *ngIf="!lastName.valid && lastName.touched">Plese enter Last Name</small>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" placeholder="Age" name="age" 
+                ngModel required #age="ngModel">
+                <small *ngIf="!age.valid && age.touched">Plese enter Age</small>
+            </td>
+        </tr>
+        <tr>
+            <td class="right">
+                <button type="submit" [disabled]="!userForm.valid">{{ newEditMode ? 'Update' : 'Submit'}}</button>
+            </td>
+        </tr>
+    </table>
+
+
+</form>
+
+
